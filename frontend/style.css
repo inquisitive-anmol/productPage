@@ -202,13 +202,16 @@ background-color: var(--smoke_white);
 #specific-product .filter  .size-btns {
     padding: .2vmax .3vmax .2vmax .3vmax;
     border-radius: 12px;
-    border: 1px solid black;
+    border: 1px solid var(--platinum_white);
     font-size: 1vmax;
     cursor: pointer;
+    background-color: var(--snow_white);
 }
 #specific-product .filter .size-btn {
-    font-size: .9vmax;
-    
+    font-size: .9vmax;   
+}
+#specific-product .filter .clicked {
+    background-color: #d1d1d1;
 }
 
 
@@ -339,26 +342,28 @@ font-size: 1.3vmax;
     #specific-product .sp-prod-cards {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
+        column-gap: 2vmin;
 }
 
 #specific-product .sp-prod-card {
-    height: 50vmin;
+    height: 55vmin;
+    
 }
 
 
 #specific-product .card-content .name {
-    font-size: 2vmin;
+    font-size: 2.5vmin;
 }
 #specific-product .card-content .category {
-    font-size: 2vmin;
+    font-size: 2.5vmin;
 }
 #specific-product .sp-prod-card  .price {
-font-size: 2vmin;
+font-size: 2.5vmin;
 
 }
 
 #specific-product .sp-prod-card .card-rating {
-    font-size: 1.8vmin;
+    font-size: 2vmin;
 }
 
 /* price styling */
@@ -389,6 +394,11 @@ font-size: 2vmin;
 }
 
 /* price styling ends*/
+
+#specific-product .filter  .size-btns {
+    font-size: 3vmin;
+    margin-bottom: 1vmin;
+}
 }
 
 
