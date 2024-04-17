@@ -1,0 +1,118 @@
+<%- include("./partials/head") %>
+
+<body>
+  <h1> List Shoes </h1>
+  <div class="container">
+    <form method="post" action="/shoes">
+      <!-- title -->
+      <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input type="text" class="form-control" id="title" aria-describedby="emailHelp" required max="100" placeholder="title of Shoes" name="title">
+      </div>
+
+      <!-- description -->
+      <div class="form-floating">
+        <textarea class="form-control" placeholder="enter the details of Shoes" id="description" name="description"></textarea>
+        <label for="description">Description</label>
+      </div>
+
+      <!-- price -->
+      <div class="mb-3">
+        <label for="price" class="form-label">price</label>
+        <input type="number" class="form-control" id="price" required min="0" placeholder="price of the Shoes" name="price">
+      </div>
+
+      <!-- discount -->
+      <div class="mb-3">
+        <label for="discPrice" class="form-label">Discount</label>
+        <input type="number" class="form-control" id="discPrice" placeholder="discount in percentage" required min="0" name="discPrice">
+      </div>
+
+      <!-- discounted price automatically calculate hoga according to price and discount percentage -->
+
+      <!-- disc Start Date -->
+      <div class="mb-3">
+        <label for="discStartDate" class="form-label">Discount Start Date</label>
+        <input type="date" class="form-control" id="discStartDate" name="discStartDate">
+      </div>
+
+      <!-- disc End Date -->
+      <div class="mb-3">
+        <label for="discEndDate" class="form-label">Discount End Date</label>
+        <input type="date" class="form-control" id="discEndDate" name="discEndDate">
+      </div>
+
+      <!-- quantity -->
+      <div class="mb-3">
+        <label for="quantity" class="form-label">Quantity</label>
+        <input type="number" class="form-control" id="quantity" placeholder="quantity of this particular Shoes" name="quantity" required>
+      </div>
+
+      <!-- category -->
+      <div class="mb-3">
+        <label for="category" class="form-label">Category</label>
+        <input type="text" class="form-control" id="category" placeholder="category of this particular Shoes" name="category">
+      </div>
+
+      <!-- gender -->
+      <div class="mb-3">
+        <label for="gender" class="form-label">Gender</label>
+        <input type="text" class="form-control" id="gender" placeholder="this shoes is for which gender" name="gender" required >
+      </div>
+
+
+      <!-- images later-->
+
+      <!-- brand -->
+      <div class="mb-3">
+        <label for="brand" class="form-label">Brand</label>
+        <input type="text" class="form-control" id="brand" placeholder="brand of this particular Shoes" name="brand">
+      </div>
+
+      <!-- size -->
+      <div class="mb-3">
+        <label for="size" class="form-label">Size</label>
+        <input type="number" class="form-control" id="size" placeholder="size of this shoes" name="size">
+      </div>
+
+      <!-- color -->
+      <div class="mb-3">
+        <label for="color" class="form-label">Color</label>
+        <input type="text" class="form-control" id="color" placeholder="color of this shoes" name="color">
+      </div>
+
+      <!-- material -->
+      <div class="mb-3">
+        <label for="material" class="form-label">Material</label>
+        <input type="text" class="form-control" id="material" placeholder="material of this shoes" name="material">
+      </div>
+
+
+      <!-- reviews auto -->
+
+      <!-- status -->
+      <div class="mb-3">
+        <label for="status" class="form-label">Status</label>
+        <input type="text" class="form-control" id="status" placeholder="sell" name="status" required>
+      </div>
+
+      <!-- New -->
+      <div class="mb-3">
+        <label for="true" class="form-label">New</label>
+        <input type="text" class="form-control" id="true" placeholder="true/false" name="New">
+      </div>
+
+
+
+
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+
+
+  </div>
+  <%- include("./partials/script") %>
+</body>
+
+</html>
