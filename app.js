@@ -37,7 +37,10 @@ return res.render("listShoes");
 
 
 app.post("/shoes", async (req, res) => {
-let result = await Shoe.create({...req.body, discountPrice: 3455});
+  let { price, discount } = req.body;
+  let discountPrice = Math.floor((price-((discount/100)*price)));
+  console.log(`price: ${price}, discount: ${discount}%, discountPrice: ${discountPrice}`);
+let result = await Shoe.create({...req.body, discountPrice});
 res.send(result);
 });
 
