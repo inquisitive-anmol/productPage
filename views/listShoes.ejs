@@ -7,7 +7,7 @@
       <!-- title -->
       <div class="mb-3">
         <label for="title" class="form-label">Title</label>
-        <input type="text" class="form-control" id="title" aria-describedby="emailHelp" required max="100" placeholder="title of Shoes" name="title">
+        <input type="text" class="form-control" id="title" aria-describedby="emailHelp" required max="100" placeholder="title of Shoes" name="title" autocomplete>
       </div>
 
       <!-- description -->
@@ -52,12 +52,19 @@
       <div class="mb-3">
         <label for="category" class="form-label">Category</label>
         <input type="text" class="form-control" id="category" placeholder="category of this particular Shoes" name="category">
+        <datalist id="category">
+          <option value="formal shoes">
+          <option value="Firefox">
+          <option value="Chrome">
+          <option value="Opera">
+          <option value="Safari">
+        </datalist>
       </div>
 
       <!-- gender -->
       <div class="mb-3">
         <label for="gender" class="form-label">Gender</label>
-        <input type="text" class="form-control" id="gender" placeholder="this shoes is for which gender" name="gender" required >
+        <input type="text" class="form-control" id="gender" placeholder="this shoes is for which gender" name="gender" required>
       </div>
 
 
@@ -65,6 +72,11 @@
       <div class="mb-3">
         <label for="images" class="form-label">Upload Images</label>
         <input class="form-control" type="file" id="images" name="images" multiple>
+
+        <% if (locals.uploadError) { %>
+        <div class="img-upload-error" style="color: red; font-size: 1.4vmax;"><%= locals.uploadError.message %></div>
+        <% } %>
+
       </div>
 
       <!-- brand -->
