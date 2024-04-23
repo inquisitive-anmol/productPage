@@ -12,6 +12,7 @@
 
       <!-- description -->
       <div class="form-floating">
+       
         <textarea class="form-control" placeholder="enter the details of Shoes" id="description" name="description"></textarea>
         <label for="description">Description</label>
       </div>
@@ -51,20 +52,24 @@
       <!-- category -->
       <div class="mb-3">
         <label for="category" class="form-label">Category</label>
-        <input type="text" class="form-control" id="category" placeholder="category of this particular Shoes" name="category">
-        <datalist id="category">
+        <input type="text" class="form-control" id="category" placeholder="category of this particular Shoes" name="category" list="categoryList">
+        <datalist id="categoryList">
           <option value="formal shoes">
-          <option value="Firefox">
-          <option value="Chrome">
-          <option value="Opera">
-          <option value="Safari">
+          <option value="running shoes">
+          <option value="casual wear">
+          <option value="sneaker">
         </datalist>
       </div>
 
       <!-- gender -->
       <div class="mb-3">
         <label for="gender" class="form-label">Gender</label>
-        <input type="text" class="form-control" id="gender" placeholder="this shoes is for which gender" name="gender" required>
+        <input type="text" class="form-control" id="gender" placeholder="this shoes is for which gender" name="gender" required list="genderList">
+        <datalist id="genderList">
+          <option value="men">
+          <option value="women">
+          <option value="kids">
+        </datalist>
       </div>
 
 
@@ -74,7 +79,7 @@
         <input class="form-control" type="file" id="images" name="images" multiple>
 
         <% if (locals.uploadError) { %>
-        <div class="img-upload-error" style="color: red; font-size: 1.4vmax;"><%= locals.uploadError.message %></div>
+        <div class="img-upload-error" style="color: red; font-size: 1.2vmax;"><%= locals.uploadError.message %></div>
         <% } %>
 
       </div>
@@ -109,7 +114,15 @@
       <!-- status -->
       <div class="mb-3">
         <label for="status" class="form-label">Status</label>
-        <input type="text" class="form-control" id="status" placeholder="sell" name="status" required>
+        <input type="text" class="form-control" id="status" placeholder="sell" name="status" required list="statusList">
+        <datalist id="statusList">
+          <option value="sell">
+          <option value="sold">
+          <option value="delivered">
+          <option value="on the way">
+          <option value="return">
+          <option value="returned">
+        </datalist>
       </div>
 
       <!-- New -->

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shoocart-Product</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <section id="specific-product">
+    <div class="specific-product">
+      <div class="sp-prod-left">
+        <div class="filter">
+          <div class="filter-title">
+            <input type="checkbox" id="filter-collapse" class="filter-title-input">
+            <label for="filter-collapse" class="filter-title-label">
+              FILTER
+              <i class="fa-solid fa-filter"></i>
+            </label>
+          </div>
+          <div class="tab">
+            <div class="tab-wrapper">
+              <input type="checkbox" id="cb1" class="tab-input">
+              <label for="cb1" class="tab_label">Availability<i class="fa-solid fa-angle-down"></i></label>
+              <div class="tab-content">
+                <div class="inStock">
+
+                  <input type="checkbox" id="check1" name="inStock" class="inStock-input">
+                  <label for="check1">In Stock(12)</label>
+                </div>
+                <div class="outStock">
+                  <input type="checkbox" id="check2" name="outStock" class="outStock-input">
+
+                  <label for="check2">Out of Stock(12)</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab">
+            <div class="tab-wrapper">
+              <input type="checkbox" id="cb2" class="tab-input">
+              <label for="cb2" class="tab_label">Price<i class="fa-solid fa-angle-down"></i></label>
+              <div class="tab-content">
+                <div class="input-grp">
+                  <div class="min-input-div">
+                    <div class="min-inp-text">Rs.</div>
+                    <input type="number" inputmode="numeric" name="minPrice" id="minPrice" min="0" max="2000" value="0">
+                  </div>
+                  <div class="to-div">to</div>
+                  <div class="max-input-div">
+                    <div class="max-inp-text">Rs.</div>
+                    <input type="number" inputmode="numeric" name="maxPrice" id="maxPrice" max="2000" min="0" value="2000">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab">
+            <div class="tab-wrapper">
+              <input type="checkbox" id="cb3" class="tab-input">
+              <label for="cb3" class="tab_label">Size<i class="fa-solid fa-angle-down"></i></label>
+              <div class="tab-content">
+                <div class="button-grp">
+                  <button class="size-btns size-btn">UK/IND-06</button>
+                  <button class="size-btns size-btn">UK/IND-07</button>
+                  <button class="size-btns size-btn">UK/IND-08</button>
+                  <button class="size-btns size-btn">UK/IND-09</button>
+                  <button class="size-btns size-btn">UK/IND-10</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab">
+            <div class="tab-wrapper">
+              <input type="checkbox" id="cb4" class="tab-input">
+              <label for="cb4" class="tab_label">Gender<i class="fa-solid fa-angle-down"></i></label>
+              <div class="tab-content">
+                <div class="inStock">
+
+                  <input type="checkbox" id="gend1" name="inStock" class="inStock-input">
+                  <label for="gend1">Men(23)</label>
+                </div>
+                <div class="outStock">
+                  <input type="checkbox" id="gend2" name="outStock" class="outStock-input">
+
+                  <label for="gend2">Women(12)</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab">
+            <div class="tab-wrapper">
+              <input type="checkbox" id="cb5" class="tab-input">
+              <label for="cb5" class="tab_label">Color<i class="fa-solid fa-angle-down"></i></label>
+              <div class="tab-content">
+                <div class="button-grp">
+                  <button class="size-btns color-btn">white</button>
+                  <button class="size-btns color-btn">black</button>
+                  <button class="size-btns color-btn">skyblue</button>
+                  <button class="size-btns color-btn">mixed</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab">
+            <div class="tab-wrapper">
+              <input type="checkbox" id="cb6" class="tab-input">
+              <label for="cb6" class="tab_label">Rating<i class="fa-solid fa-angle-down"></i></label>
+              <div class="tab-content">
+                <div class="outStock">
+                  <input type="checkbox" id="rate1" name="inStock" class="inStock-input">
+                  <label for="rate1">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </label>
+                </div>
+                <div class="outStock">
+                  <input type="checkbox" id="rate2" name="outStock" class="outStock-input">
+
+                  <label for="rate2">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </label>
+                </div>
+                <div class="outStock">
+                  <input type="checkbox" id="rate3" name="outStock" class="outStock-input">
+
+                  <label for="rate3">
+
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </label>
+                </div>
+                <div class="outStock">
+                  <input type="checkbox" id="rate4" name="outStock" class="outStock-input">
+
+                  <label for="rate4">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </label>
+                </div>
+                <div class="outStock">
+                  <input type="checkbox" id="rate5" name="outStock" class="outStock-input">
+
+                  <label for="rate5">
+                    <i class="fa-solid fa-star"></i>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="sp-prod-right">
+        <div class="sp-prod-cards">
+
+          <% if (products.length !== 0) { %>
+
+          <% products.forEach(element => { %>
+          <a href="#">
+            <div class="sp-prod-card">
+              <div class="card-img">
+                <img src="<%=element.images[0]%>" alt="">
+                <p><%=element.discount%>% OFF</p>
+
+              </div>
+              <div class="card-content">
+                <p class="name"><%= element.title%></p>
+                <p class="category"><%=element.brand%></p>
+                <div class="price">
+                  <p class="actual-price">
+                    Rs. <%=element.discountPrice%>
+                  </p>
+                  <p class="discount-price">
+                    <del>Rs. <%=element.price%></del>
+                  </p>
+                </div>
+                <p class="card-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </p>
+              </div>
+            </div>
+          </a>
+          <% }) %>
+
+          <% } else {%>
+          <div class="not-found-msg">
+            <h1>No Product Found</h1>
+            <h3>products will arrive soon</h3>
+          </div>
+          <% } %>
+        </div>
+      </div>
+    </div>
+
+
+
+
+  </section>
+
+
+
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>

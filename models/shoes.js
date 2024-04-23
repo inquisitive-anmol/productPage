@@ -89,6 +89,10 @@ const shoeSchema = new mongoose.Schema({
     enum: ["true", "false"],
     default: "false",
   },
+  cartProd: {
+    type: mongoose.Schema.Types.ObjectId,
+     ref: 'Cart',
+  }
 
 },
   { timestamps: true });

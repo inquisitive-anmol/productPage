@@ -6,6 +6,7 @@ const path = require('path');
 const app = express();
 
 const Shoe = require("./models/shoes");
+const Cart = require("./models/cart");
 const upload = require("./middlewares/uploadImg");
 const port = process.env.PORT || 3000; // Default to 3000 if PORT is not set
 
@@ -43,6 +44,13 @@ app.get("/", (req, res) => {
   res.send("<h1> This is home page </h1>");
 })
 
+app.get("/product", async (req, res) => {
+let products = await Shoe.find({});
+
+  // return res.send(products);
+  return res.render("product", {products});
+})
+
 app.get("/shoes", (req, res) => {
   return res.render("listShoes");
 });
@@ -55,15 +63,28 @@ if(req.uploadError) {
     uploadError: req.uploadError,
   })
 } else {
-  console.log("no any error");
+  // console.log("no any error");
   const uploadedFiles = req.files;
-  const imageUrls = uploadedFiles.map(file => `/public/img/products/${file.filename}`); // Create image URLs
+  const imageUrls = uploadedFiles.map(file => `/img/products/${file.filename}`); // Create image URLs
   let discountPrice = Math.floor((price - ((discount / 100) * price))) || price;
   let result = await Shoe.create({ ...req.body, discountPrice, images: imageUrls });
   res.redirect("/");
 }
 
+}); 
+
+app.get("/cart", async (req, res) => {
+let product = await Cart.create({
+  product: '66256e5ed5173f1bb9144bc3',
+  name: "anmol"
 });
+res.send(product);
+})
+app.get("/cartd",async (req, res) => {
+  let productd = await Cart.find({}).populate("product");
+  console.log(productd);
+  res.send(productd);
+})
 
 
 app.listen(port, () => {

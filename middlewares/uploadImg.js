@@ -13,7 +13,7 @@ const validateImage = (req, file, cb) => {
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, './public/img/uploads/')
+    cb(null, './public/img/products/')
   }, // Folder to store uploaded images
   
   filename: function(req, file, cb) {
